@@ -1,0 +1,8 @@
+services:
+  node:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    user: 1000:1000
+    network_mode: host
