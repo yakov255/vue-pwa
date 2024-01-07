@@ -10,6 +10,8 @@ import Calendar from 'primevue/calendar'
 import 'primeicons/primeicons.css'
 import AppTopbar from "@/components/AppTopbar.vue";
 import 'normalize.css'
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
 
 import '@/assets/styles.scss'
 
@@ -20,6 +22,9 @@ app.component('Button', Button)
 app.component('Dialog', Dialog)
 app.component('Calendar', Calendar)
 app.component('AppTopbar', AppTopbar)
+app.component('DataTable', DataTable)
+app.component('Column', Column)
 
 
 app.mount('#app')
+

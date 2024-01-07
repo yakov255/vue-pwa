@@ -61,10 +61,16 @@
   </div>
 
   <div class="card">
-
-
-
-
+    <DataTable :value="events" stripedRows size="small">
+      <Column field="dateTime" header="Date">
+        <template #body="slotProps">
+          {{ formatDateTime(slotProps.data.dateTime) }}
+        </template>
+      </Column>
+      <Column field="minValue" header="min" sortable></Column>
+      <Column field="maxValue" header="Max" sortable></Column>
+      <Column field="pulse" header="Pulse" sortable></Column>
+    </DataTable>
   </div>
 
 </template>
@@ -99,12 +105,18 @@ export default {
       window.localStorage.setItem("events", JSON.stringify(events.value))
     }
 
+    const formatDateTime = function (dateTime) {
+      return moment(dateTime).format('MM/DD/YYYY H:mm')
+    }
+
     return {
       minValue,
       maxValue,
       pulse,
       dateTime,
-      save
+      events,
+      save,
+      formatDateTime
     }
   },
 }
