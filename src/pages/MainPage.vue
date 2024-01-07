@@ -1,4 +1,50 @@
 <template>
+  <div class="card">
+    <h5>Добавить запись</h5>
+    <div class="field">
+      <label for="value-min">Нижнее давление</label>
+      <InputNumber id="value-min" v-model="amount" inputClass="number-input" showButtons buttonLayout="horizontal"
+                   min="5" max="500" :step="5"
+                   decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success">
+        <template #incrementbuttonicon>
+          <span class="pi pi-plus"/>
+        </template>
+        <template #decrementbuttonicon>
+          <span class="pi pi-minus"/>
+        </template>
+      </InputNumber>
+    </div>
+
+    <div class="field">
+      <label for="value-max">Верхнее давление</label>
+      <InputNumber v-model="amount" inputClass="number-input" showButtons buttonLayout="horizontal" min="5" max="500"
+                   :step="5"
+                   decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success">
+        <template #incrementbuttonicon>
+          <span class="pi pi-plus"/>
+        </template>
+        <template #decrementbuttonicon>
+          <span class="pi pi-minus"/>
+        </template>
+      </InputNumber>
+    </div>
+
+
+    <div class="field">
+      <label for="pulse">Пульс</label>
+      <InputNumber v-model="amount" inputClass="number-input" showButtons buttonLayout="horizontal" min="5" max="500"
+                   :step="5"
+                   decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success">
+        <template #incrementbuttonicon>
+          <span class="pi pi-plus"/>
+        </template>
+        <template #decrementbuttonicon>
+          <span class="pi pi-minus"/>
+        </template>
+      </InputNumber>
+    </div>
+  </div>
+
   <Button class="button is-fullwidth is-medium is-primary" @click="inputModalActive = true">Record a drink
   </Button>
   <Dialog v-model:visible="inputModalActive">
@@ -126,3 +172,33 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  border-radius: $borderRadius;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.number-input {
+  width: 100%;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field > label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+</style>

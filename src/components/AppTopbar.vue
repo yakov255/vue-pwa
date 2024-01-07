@@ -1,7 +1,7 @@
 <template>
   <div class="layout-topbar">
     <div class="layout-topbar-logo">
-      <img src="/img/logo-dark.svg" alt="logo"/>
+      <img src="/img/logo-white.svg" alt="logo"/>
       <span>App</span>
     </div>
   </div>

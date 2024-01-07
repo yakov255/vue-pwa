@@ -15,13 +15,13 @@ import AppFooter from "@/components/AppFooter.vue";
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .layout-main-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  padding: 7rem 2rem 2rem 4rem;
+  padding: 7rem 1rem 2rem 1rem;
   transition: margin-left $transitionDuration;
 }
 </style>
