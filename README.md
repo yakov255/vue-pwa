@@ -1,4 +1,9 @@
-# vue3-pressure-record
+# vue pwa example app
+
+https://yakov255.github.io/vue-pwa/
+
+![Main page screenshot](screensots/main_page.png)
+
 
 ## Project setup
 ```
